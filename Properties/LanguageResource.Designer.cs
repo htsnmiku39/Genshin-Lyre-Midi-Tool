@@ -106,6 +106,51 @@ namespace Genshin_Lyre_Midi_Tool.Properties {
         }
         
         /// <summary>
+        ///   查找类似 Idle 的本地化字符串。
+        /// </summary>
+        internal static string midiState_Idle {
+            get {
+                return ResourceManager.GetString("midiState.Idle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Loading 的本地化字符串。
+        /// </summary>
+        internal static string midiState_Loading {
+            get {
+                return ResourceManager.GetString("midiState.Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Paused 的本地化字符串。
+        /// </summary>
+        internal static string midiState_Paused {
+            get {
+                return ResourceManager.GetString("midiState.Paused", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Playing 的本地化字符串。
+        /// </summary>
+        internal static string midiState_Playing {
+            get {
+                return ResourceManager.GetString("midiState.Playing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Waiting 的本地化字符串。
+        /// </summary>
+        internal static string midiState_Waiting {
+            get {
+                return ResourceManager.GetString("midiState.Waiting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 No Midi File Selected 的本地化字符串。
         /// </summary>
         internal static string NoFile {
@@ -210,6 +255,15 @@ namespace Genshin_Lyre_Midi_Tool.Properties {
         internal static string stopButton_Text {
             get {
                 return ResourceManager.GetString("stopButton.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 --------    Valid Range    -------- 的本地化字符串。
+        /// </summary>
+        internal static string validRangeLabel_Text {
+            get {
+                return ResourceManager.GetString("validRangeLabel.Text", resourceCulture);
             }
         }
     }

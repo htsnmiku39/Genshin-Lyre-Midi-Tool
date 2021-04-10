@@ -168,4 +168,22 @@
   <data name="Pause" xml:space="preserve">
     <value>Pause</value>
   </data>
+  <data name="midiState.Loading" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="midiState.Idle" xml:space="preserve">
+    <value>Idle</value>
+  </data>
+  <data name="midiState.Waiting" xml:space="preserve">
+    <value>Waiting</value>
+  </data>
+  <data name="midiState.Playing" xml:space="preserve">
+    <value>Playing</value>
+  </data>
+  <data name="midiState.Paused" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="validRangeLabel.Text" xml:space="preserve">
+    <value>--------    Valid Range    --------</value>
+  </data>
 </root>

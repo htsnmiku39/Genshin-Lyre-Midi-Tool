@@ -131,6 +131,6 @@ namespace Genshin_Lyre_Midi_Tool.Models
     }
     public enum MidiInfoSate
     {
-        Loading,Idle,Waiting,Playing, Paused
+        Loading,Idle, Waiting, Playing, Paused
     }
 }

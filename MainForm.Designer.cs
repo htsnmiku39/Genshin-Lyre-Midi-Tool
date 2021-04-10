@@ -44,16 +44,19 @@ namespace Genshin_Lyre_Midi_Tool
             this.midiFolderPathTextBox = new MaterialSkin.Controls.MaterialTextBox();
             this.editTrack = new System.Windows.Forms.TabPage();
             this.previewAndPlay = new System.Windows.Forms.TabPage();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.midiSate = new MaterialSkin.Controls.MaterialLabel();
+            this.midiTicks = new MaterialSkin.Controls.MaterialLabel();
             this.stopButton = new MaterialSkin.Controls.MaterialButton();
             this.materialProgressBar1 = new MaterialSkin.Controls.MaterialProgressBar();
             this.playButton = new MaterialSkin.Controls.MaterialButton();
             this.pianoControl1 = new Sanford.Multimedia.Midi.UI.PianoControl();
+            this.validRangeLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.settingsAndAbout = new System.Windows.Forms.TabPage();
             this.IconList = new System.Windows.Forms.ImageList(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTabControl1.SuspendLayout();
             this.openMidi.SuspendLayout();
             this.previewAndPlay.SuspendLayout();
@@ -250,12 +253,15 @@ namespace Genshin_Lyre_Midi_Tool
             // 
             // previewAndPlay
             // 
-            this.previewAndPlay.Controls.Add(this.materialLabel3);
-            this.previewAndPlay.Controls.Add(this.materialLabel1);
+            this.previewAndPlay.Controls.Add(this.midiSate);
+            this.previewAndPlay.Controls.Add(this.midiTicks);
             this.previewAndPlay.Controls.Add(this.stopButton);
             this.previewAndPlay.Controls.Add(this.materialProgressBar1);
             this.previewAndPlay.Controls.Add(this.playButton);
             this.previewAndPlay.Controls.Add(this.pianoControl1);
+            this.previewAndPlay.Controls.Add(this.validRangeLabel);
+            this.previewAndPlay.Controls.Add(this.label1);
+            this.previewAndPlay.Controls.Add(this.label2);
             this.previewAndPlay.ImageKey = "baseline_piano_white_24dp.png";
             this.previewAndPlay.Location = new System.Drawing.Point(4, 31);
             this.previewAndPlay.Name = "previewAndPlay";
@@ -264,18 +270,31 @@ namespace Genshin_Lyre_Midi_Tool
             this.previewAndPlay.Text = "previewAndPlay";
             this.previewAndPlay.UseVisualStyleBackColor = true;
             // 
-            // materialLabel1
+            // midiSate
             // 
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(90, 48);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(598, 23);
-            this.materialLabel1.TabIndex = 5;
-            this.materialLabel1.Text = "100000 / 10000000000";
-            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.midiSate.Depth = 0;
+            this.midiSate.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.midiSate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.midiSate.HighEmphasis = true;
+            this.midiSate.Location = new System.Drawing.Point(12, 48);
+            this.midiSate.MouseState = MaterialSkin.MouseState.HOVER;
+            this.midiSate.Name = "midiSate";
+            this.midiSate.Size = new System.Drawing.Size(72, 23);
+            this.midiSate.TabIndex = 7;
+            this.midiSate.Text = "Idle";
+            this.midiSate.UseAccent = true;
+            // 
+            // midiTicks
+            // 
+            this.midiTicks.Depth = 0;
+            this.midiTicks.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.midiTicks.Location = new System.Drawing.Point(90, 48);
+            this.midiTicks.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.midiTicks.MouseState = MaterialSkin.MouseState.HOVER;
+            this.midiTicks.Name = "midiTicks";
+            this.midiTicks.Size = new System.Drawing.Size(598, 23);
+            this.midiTicks.TabIndex = 5;
+            this.midiTicks.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // stopButton
             // 
@@ -337,6 +356,33 @@ namespace Genshin_Lyre_Midi_Tool
             this.pianoControl1.TabIndex = 0;
             this.pianoControl1.Text = "pianoControl1";
             // 
+            // validRangeLabel
+            // 
+            this.validRangeLabel.Location = new System.Drawing.Point(280, 276);
+            this.validRangeLabel.Name = "validRangeLabel";
+            this.validRangeLabel.Size = new System.Drawing.Size(299, 19);
+            this.validRangeLabel.TabIndex = 10;
+            this.validRangeLabel.Text = "validRangeLabel";
+            this.validRangeLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(257, 276);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(17, 12);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "↓";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(585, 276);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(17, 12);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "↓";
+            // 
             // settingsAndAbout
             // 
             this.settingsAndAbout.ImageKey = "baseline_settings_white_24dp.png";
@@ -362,20 +408,6 @@ namespace Genshin_Lyre_Midi_Tool
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // materialLabel3
-            // 
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.materialLabel3.HighEmphasis = true;
-            this.materialLabel3.Location = new System.Drawing.Point(12, 48);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(72, 23);
-            this.materialLabel3.TabIndex = 7;
-            this.materialLabel3.Text = "Playing";
-            this.materialLabel3.UseAccent = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -393,6 +425,7 @@ namespace Genshin_Lyre_Midi_Tool
             this.materialTabControl1.ResumeLayout(false);
             this.openMidi.ResumeLayout(false);
             this.previewAndPlay.ResumeLayout(false);
+            this.previewAndPlay.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -419,7 +452,10 @@ namespace Genshin_Lyre_Midi_Tool
         private MaterialProgressBar materialProgressBar1;
         private System.Windows.Forms.Timer timer1;
         private MaterialButton stopButton;
-        private MaterialLabel materialLabel1;
-        private MaterialLabel materialLabel3;
+        private MaterialLabel midiTicks;
+        private MaterialLabel midiSate;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label validRangeLabel;
     }
 }

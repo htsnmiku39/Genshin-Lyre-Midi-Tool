@@ -168,4 +168,22 @@
   <data name="Pause" xml:space="preserve">
     <value>暂停</value>
   </data>
+  <data name="midiState.Waiting" xml:space="preserve">
+    <value>等待中</value>
+  </data>
+  <data name="midiState.Playing" xml:space="preserve">
+    <value>播放</value>
+  </data>
+  <data name="midiState.Paused" xml:space="preserve">
+    <value>暂停</value>
+  </data>
+  <data name="midiState.Loading" xml:space="preserve">
+    <value>加载中</value>
+  </data>
+  <data name="midiState.Idle" xml:space="preserve">
+    <value>空闲</value>
+  </data>
+  <data name="validRangeLabel.Text" xml:space="preserve">
+    <value>--------    有效范围    --------</value>
+  </data>
 </root>

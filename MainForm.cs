@@ -159,7 +159,7 @@ namespace Genshin_Lyre_Midi_Tool
         private void midiInfo_StateChangedEvent(object sender, EventArgs e)
         {
             playButton.Text = _languageResourceManager.GetString(workingMidiInfo.State == MidiInfoSate.Playing ? "Pause" : "playButton.Text");
-
+            midiSate.Text = _languageResourceManager.GetString("midiState."+workingMidiInfo.State);
         }
 
         private void playButton_Click(object sender, EventArgs e)
@@ -181,8 +181,6 @@ namespace Genshin_Lyre_Midi_Tool
         {
             materialTabControl1.Enabled = true;
             Text = workingMidiInfo.FileName;
-            materialProgressBar1.Value = 0;
-            materialProgressBar1.Maximum = workingMidiInfo.Sequence.GetLength();
         }
 
         private void sequence_LoadProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -220,7 +218,15 @@ namespace Genshin_Lyre_Midi_Tool
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            materialProgressBar1.Value = workingMidiInfo.Sequencer.Position;
+            try
+            {
+                materialProgressBar1.Value = workingMidiInfo.Sequencer.Position;
+                midiTicks.Text = materialProgressBar1.Value + " / " + materialProgressBar1.Maximum;
+            }
+            catch (Exception exception)
+            {
+                workingMidiInfo.State = MidiInfoSate.Idle;
+            }
         }
 
         private void midi_PlayingStop(object sender, EventArgs e)
@@ -236,6 +242,9 @@ namespace Genshin_Lyre_Midi_Tool
         private void midiInfo_StateIdleEvent(object sender, EventArgs e)
         {
             materialProgressBar1.Value = 0;
+            materialProgressBar1.Maximum = workingMidiInfo.Sequence.GetLength();
+            midiTicks.Text = "0 / "+ materialProgressBar1.Maximum;
+            
         } 
         private void midiInfo_StatePlayingEvent(object sender, EventArgs e)
         {
